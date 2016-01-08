@@ -21,14 +21,14 @@ $scope.GetAll=function(){
 
   $http({
     method : 'POST',
-    url : 'http://dev2.mirebate.com/mobile/botServer/getall.php',
+    url : '',
     data: postData,
     headers : {'Content-Type': 'application/x-www-form-urlencoded'}
   }).success(function(result){
    var a= JSON.stringify(result);
    console.log(a);
    $scope.items=a;
-  document.getElementById("result").value =a;
+
   }).error(function(error){
     console.log("NO furula");
   });
